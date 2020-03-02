@@ -21,11 +21,9 @@ class PostOfficeViewModel(private val postOfficeRepo : PostOfficeRepo) : ViewMod
         pinCode.value = "678503"
     }
 
-    /*fun getPostOfficeResponse(input: String) {
+    fun getPostOfficeResponse(input: String) {
         pinCode.value = input
-    }*/
-
-
+    }
 
     var postOfficeResponse = pinCode.switchMap { res ->
         liveData(Dispatchers.IO) {
